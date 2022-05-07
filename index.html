@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Site de produto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <nav class="navbar navbar-default navbar-inverse">
+  <div class="container">
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">SmallWorlds</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Portfólio</a></li>
+        <li><a href="#">Serviços</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="#search">Procurar</a></li>
+        
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+   
+   
+   <div id="search">
+    <button type="button" class="close">X</button>
+    <form>
+        <input type="search" value="" placeholder="Qual é a sua ...." />
+        <button type="submit" class="btn">Procurar</button>
+    </form>
+</div>
+   
+   
+   <div class="content">
+       <div class="thing">
+           <h2>Agência perfeita para você</h2>
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae ducimus accusantium voluptates nesciunt, perspiciatis, corporis.</p>
+       <a href="#">Saiba mais agora</a>
+       </div>
+   </div>
+    </header>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+    $('a[href="#search"]').on('click', function(event) {
+        event.preventDefault();
+        $('#search').addClass('open');
+        $('#search > form > input[type="search"]').focus();
+    });
+    
+    $('#search, #search button.close').on('click', function(event) {
+        if (event.target == this || event.target.className == 'close') {
+            $(this).removeClass('open');
+        }
+    });
+    
+    
+    
+});
+    </script>
+</body>
+</html>
